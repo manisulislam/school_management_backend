@@ -107,3 +107,14 @@
     17. Club references multiple Student members and has an Advisor from the Teacher model.
     18 PerformanceReview references Teacher and Admin who performs the review.
     19. Admin handles various administrative functions in the system.    
+    2. CourseMaterial references Course and Teacher.
+    21. Feedback references Student and Course.
+    22. ReportCard references Student and aggregates Course scores.
+    23. Schedule references Class and optionally Exam.
+    24. HealthRecord references Student.
+    25. Internship references Student.
+    26. Mentorship references Teacher (mentor) and Student (mentee).
+    27. AttendanceHistory references Student for historical data.
+    28 Alumni references Student.
+    29. JobPosting references Admin for posting jobs.
+    30. EventParticipation references Event and Student.
