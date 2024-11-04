@@ -6,6 +6,6 @@ const mentorshipSchema = new mongoose.Schema({
     startDate: { type: Date, required: true },
     goals: { type: String },
     progress: { type: String }
-});
+},{timestamps: true});
 
 const Mentorship = mongoose.model('Mentorship', mentorshipSchema);

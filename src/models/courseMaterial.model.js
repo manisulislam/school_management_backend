@@ -6,7 +6,7 @@ const courseMaterialSchema = new mongoose.Schema({
     fileUrl: { type: String, required: true }, // URL to the material file
     courseId: { type: mongoose.Schema.Types.ObjectId, ref: 'Course', required: true },
     uploadedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'Teacher', required: true },
-    createdAt: { type: Date, default: Date.now }
-});
+    
+},{timestamps: true});
 
 const CourseMaterial = mongoose.model('CourseMaterial', courseMaterialSchema);

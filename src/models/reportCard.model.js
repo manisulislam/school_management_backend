@@ -8,7 +8,7 @@ const reportCardSchema = new mongoose.Schema({
         score: { type: Number, required: true }
     }],
     comments: { type: String },
-    createdAt: { type: Date, default: Date.now }
-});
+    
+},{timestamps:true});
 
 const ReportCard = mongoose.model('ReportCard', reportCardSchema);

@@ -6,6 +6,6 @@ const assignmentSchema = new mongoose.Schema({
     dueDate: { type: Date, required: true },
     classId: { type: mongoose.Schema.Types.ObjectId, ref: 'Class', required: true },
     submissions: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Submission' }]
-});
+},{timestamps: true});
 
 const Assignment = mongoose.model('Assignment', assignmentSchema);

@@ -6,6 +6,6 @@ const bookSchema = new mongoose.Schema({
     isbn: { type: String, required: true, unique: true },
     publicationYear: { type: Number, required: true },
     borrowedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'Student' }
-});
+},{timestamps: true});
 
 const Book = mongoose.model('Book', bookSchema);

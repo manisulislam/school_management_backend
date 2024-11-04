@@ -8,7 +8,7 @@ const jobPostingSchema = new mongoose.Schema({
     location: { type: String },
     contactEmail: { type: String, required: true },
     postedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'Admin', required: true },
-    createdAt: { type: Date, default: Date.now }
-});
+    
+},{timestamps: true});
 
 const JobPosting = mongoose.model('JobPosting', jobPostingSchema);

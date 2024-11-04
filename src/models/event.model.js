@@ -6,6 +6,6 @@ const eventSchema = new mongoose.Schema({
     location: { type: String, required: true },
     description: { type: String },
     attendees: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Student' }]
-});
+},{timestamps: true});
 
 const Event = mongoose.model('Event', eventSchema);

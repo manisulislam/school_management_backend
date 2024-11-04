@@ -5,7 +5,7 @@ const alumniSchema = new mongoose.Schema({
     graduationYear: { type: Number, required: true },
     currentPosition: { type: String },
     contactInformation: { type: String },
-    updatedAt: { type: Date, default: Date.now }
-});
+    
+},{timestamps: true});
 
 const Alumni = mongoose.model('Alumni', alumniSchema);

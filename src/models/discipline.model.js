@@ -6,6 +6,6 @@ const disciplineSchema = new mongoose.Schema({
     description: { type: String, required: true },
     actionTaken: { type: String }, // e.g., warning, suspension
     reportedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'Teacher' }
-});
+},{timestamps: true});
 
 const Discipline = mongoose.model('Discipline', disciplineSchema);

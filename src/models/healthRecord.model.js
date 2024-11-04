@@ -6,7 +6,7 @@ const healthRecordSchema = new mongoose.Schema({
     medications: { type: String },
     medicalConditions: { type: String },
     emergencyContact: { type: String },
-    createdAt: { type: Date, default: Date.now }
-});
+    
+},{timestamps: true});
 
 const HealthRecord = mongoose.model('HealthRecord', healthRecordSchema);

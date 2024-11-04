@@ -6,7 +6,7 @@ const feeSchema = new mongoose.Schema({
     dueDate: { type: Date, required: true },
     paymentStatus: { type: String, enum: ['Paid', 'Pending'], default: 'Pending' },
     paymentDate: { type: Date },
-    createdAt: { type: Date, default: Date.now }
-});
+    
+},{timestamps: true});
 
 const Fee = mongoose.model('Fee', feeSchema);

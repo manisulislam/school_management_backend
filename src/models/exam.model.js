@@ -6,6 +6,6 @@ const examSchema = new mongoose.Schema({
     examDate: { type: Date, required: true },
     totalMarks: { type: Number, required: true },
     results: [{ type: mongoose.Schema.Types.ObjectId, ref: 'ExamResult' }]
-});
+},{timestamps: true});
 
 const Exam = mongoose.model('Exam', examSchema);

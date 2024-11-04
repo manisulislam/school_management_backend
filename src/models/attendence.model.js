@@ -5,6 +5,6 @@ const attendanceSchema = new mongoose.Schema({
     classId: { type: mongoose.Schema.Types.ObjectId, ref: 'Class', required: true },
     date: { type: Date, required: true },
     status: { type: String, enum: ['Present', 'Absent', 'Late'], required: true }
-});
+},{timestamps: true});
 
 const Attendance = mongoose.model('Attendance', attendanceSchema);

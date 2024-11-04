@@ -7,6 +7,6 @@ const internshipSchema = new mongoose.Schema({
     startDate: { type: Date, required: true },
     endDate: { type: Date },
     feedback: { type: String }
-});
+},{timestamps: true});
 
 const Internship = mongoose.model('Internship', internshipSchema);

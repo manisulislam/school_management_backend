@@ -5,6 +5,6 @@ const busSchema = new mongoose.Schema({
     driverName: { type: String, required: true },
     capacity: { type: Number, required: true },
     students: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Student' }]
-});
+},{timestamps: true});
 
 const Bus = mongoose.model('Bus', busSchema);

@@ -5,6 +5,6 @@ const gradeSchema = new mongoose.Schema({
     courseId: { type: mongoose.Schema.Types.ObjectId, ref: 'Course', required: true },
     term: { type: String, required: true },
     score: { type: Number, required: true }
-});
+},{timestamps: true});
 
 const Grade = mongoose.model('Grade', gradeSchema);
